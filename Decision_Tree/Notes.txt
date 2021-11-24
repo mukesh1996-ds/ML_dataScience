@@ -1,0 +1,12 @@
+In the early stage I just want to inform you that please install all the required 
+dependencies for the project by using the command as shown below:
+=================================================================================
+pip install -r requirements.txt
+=================================================================================
+
+Decision Tree: It is the very powerful algorithm which is used for both classification
+regression problems. It work by dividing the whole dataset into tree like structure based 
+on some rules and condition ans then give the prediction based on those condition.
+It work good with complex data and easy to understand.
+
+For notes look at the pdf given.

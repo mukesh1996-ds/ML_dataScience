@@ -1,0 +1,9 @@
+Optuna: It is a framework, which is more powerful than GridCV or Random search.
+It can be easily be used in SKlearn, Keras, Tensorflow etc.
+This is used for finding the best hyperparamters for any model.
+
+
+website: Optuna.org
+
+We are built both type of model.
+

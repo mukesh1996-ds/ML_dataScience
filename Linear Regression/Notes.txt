@@ -1,0 +1,86 @@
+In the early stage I just want to inform you that please install all the required 
+dependencies for the project by using the command as shown below:
+=================================================================================
+pip install -r requirements.txt
+=================================================================================
+LINEAR REGRESSION: (HIGH BAIS LOW VARIANCE)
+
+Def: The LINEAR REGRESSION is a supervised learning algorithm which help to preform 
+REGRESSION task. This algorithm is used to identify the relationship between dependent 
+and independent variables. The relationship can be identified by constructing the 
+straight line equation.
+
+y = mx + c where y = label or traget variable
+                 x = input variable
+                 m = slope or gradient
+                 b = intercept point
+
+Gradient Desent: It help to find the parameter which help in minimizing the cost function.
+With the help of graident desent we need to find the well and optimized value or best fit 
+line in such a way that the error should be very less.
+The best fit line is choosen in such a way that will genearlized the whole dataset.
+we can clearlly see in the concept of 3 axis where 
+--> x = data point
+--> y = traget data point
+--> z = error
+link for the image: https://forsuncnc.com/wp-content/uploads/2020/04/3-axis-cnc-1.jpg
+
+When working with the gradient desent learning rate is the step by step process i.e. value
+by value. For finding the next point or position formula is 
+b = a - gamma(delata(f(a))) where b = next position
+                                  a = representing the current position
+                                  - = minimization part of gradient desent
+                                  gamma = waiting factor
+                                  delata(f(a)) = representing the direction
+
+Learing Rate: For graident desent to reach the local minimum point we need to select a 
+value which is neither too high nor too low.
+In learnig rate the steps taken should be very less as it will be easy to calculate the 
+error. Imagine that you are taking long steps the it will bounce back and your error rate 
+will increase.
+line for the image: 
+https://www.jeremyjordan.me/content/images/2018/02/Screen-Shot-2018-02-24-at-11.47.09-AM.png 
+
+For verifying the gradient desent works properlly "The cost function or the error rate should 
+decrease after every iteration and at one stage the learnig rate stops increase or decreasing "
+that means it has reached the optimum position."
+For checking the good learning rate we can plot the image as shown below:
+https://www.researchgate.net/profile/Hajar-Feizi/publication/341609757/figure/fig2/AS:894745802977280@1590335431623/Changes-in-the-loss-function-vs-the-epoch-by-the-learning-rate-40.png
+
+Note: If the gradient desent work properlly then the cost function or the error rate should be 
+reduced or decreased.
+
+Types of gradient desent:
+--> Batch Gradient Desent=====> Batch by Batch approach
+--> Stochastic Gradinet Desent===> One by One approach
+--> Min-batch Gradient Desent ===> Combination of both
+
+Fromulas :
+
+Straight line = y = mx + c
+To find the new Straight line equation:
+ m(new) = m(old) - eta(1/m(y - yhat))---> to calculate the slope
+ c(new) = c(old) - eta(1/m(y- yhat)) ---> to calculate the intercept
+To calculate accuracy = 1-RSS/TSS 
+link for the formulas is given below:
+https://4.bp.blogspot.com/-wG7IbjTfE6k/XGUvqm7TCVI/AAAAAAAAAZU/vpH1kuKTIooKTcVlnm1EVRCXLVZM9cPNgCLcBGAs/s1600/formula-MAE-MSE-RMSE-RSquared.JPG
+
+We can also implement regularization in Linear regression:
+1. Ridge regularization: This model solves a regression model where the loss function is the linear 
+least squares function and regularization is given by the l2-norm. 
+Link: http://img.voycn.com/images/2020/01/86cdc9d73e4df973f3a5eece68bdc1d1.png
+
+2. Lasso: the Lasso model is optimizing the same objective function as the Elastic Net with l1_ratio=1.0
+Link: https://miro.medium.com/max/1400/1*P5Lq5mAi4WAch7oIeiS3WA.png
+
+3. ElesticNet: Linear regression with combined L1 and L2 priors as regularizer.
+Link: https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/eq_39.png
+
+OverFitting vs underfitting: 
+underfitting: It can't capture the underlying tendency of data. 
+              It also destroy the accuracy of the model.
+              Increase model complexity.
+              Dataset size is very low.
+OverFitting: Reduce the model complexity.
+             Increase the training data.
+             Dataset size is vary high.

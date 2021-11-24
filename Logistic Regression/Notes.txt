@@ -1,0 +1,84 @@
+In the early stage I just want to inform you that please install all the required 
+dependencies for the project by using the command as shown below:
+=================================================================================
+pip install -r requirements.txt
+=================================================================================
+
+Logistic Regression: It is a supervised learning algorithm which is used to solve 
+classification porblems. This algorithm help to calculate the probabilities of the 
+given value weather it belong to the specific class or not.
+If the probability is more than 50% then only the value assign to a praticular class 
+else value is assign to other class.
+Logistic Regression also act as a binary classifier.
+
+Working wiht Logistic model: In this model we will be calculating the probabilities
+where the values lie between 0 and 1 only.
+Imagine that you are calculating the probabilities with the help of Linear Regression,
+then the probability values may range will be less than 0 or greater than 1 which may 
+make any sense.
+To calculate the probabilities in Logistic Regression we will be using a function called
+SIGMOID function.
+Mathematically representation of Logistic Regression is 1/ (1 + e^-t)
+Graphical representation is shown below:
+Link : https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F4735094%2Fe1eec48486b8572472520f2593706f9b%2Fmain-qimg-6b67bea3311c3429bfb34b6b1737fe0c.jpg?generation=1600875005039063&alt=media
+
+The main purpose using the sigmoid fucntion is that it ranges its boundery values between
+0 to 1. Thus its useful for calculating Logistic function.
+For calculating the derivative function of the logistic function is easy than other function
+which is useful durning gradient desent fucntion.
+Link: https://andymath.com/wp-content/uploads/2019/08/Logistic-Function.jpg
+
+** Cost Function of Logistic regression is Logloss.**
+
+Logloss: It is the most important classification metrics based on probabilities.
+         For any given problem a lower Logloss value means better predictions.
+         LogLoss is the negative average of the log of corrected predicted probabilities for each instance. 
+         Simple formula = LogLoss = -1/n(submassion(log(pi))
+         
+         Formula: link given below:
+         https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUtZTxqR-zJokAS9RWdOx0iBrmQVSE2esPhA&usqp=CAU
+
+** Multinomial Logsitic Regression **
+Number of labels are more than 2
+Logic is simple:
+1. we train our logistic model for each class and calculate the probabilities and specify that 
+the label belong to the specific class.
+2. Once all the model is trained we predict the new value class by choosing that class for which 
+the probability is maximum.
+
+Learning rate: It is the algorithm to find the best possible hypothesis for the best parameterizarion
+where the less error is observaed.
+Minimizing the error using batch-gradient desent.
+For calculation look for images
+
+Classification Model evaluation:
+
+Confussion metrics: Image of confusion metrics look like:
+Link: https://miro.medium.com/max/1000/1*fxiTNIgOyvAombPJx5KGeA.png
+Meaning for each terms:
+1. True Positive (TP): From the model the output predicte is positive when it is actually positive.
+2. True negative (TN): From the model the output predicted is negative when it is actually negative.
+3. False Positive (FP: From the model the output predicted is positive when it is actually negative.
+4. False negative (FN):From the model the output predicted is negative when it is actually positive.
+
+Accuracy = (TP + TN)/ (TP+TN+FP+FN)
+Recall or sensitivity = TP/(TP+FN)
+Precession = TP/(TP+FP)
+F1 score = 2 * (Precession * Recall)/ Precession + Recall
+
+AUC AND ROC: 
+ROC --> (Reciver Operator Characteristic):
+we know that the classification algorithm works on the concept of probabilities of occourence of 
+the possible outcomes.
+probability lie between 0 and 1.
+
+But when we are working with classification we will get the output between 0 and 1, then what 
+value to be selected.
+To select the value the Threshold is used.
+Note: A Threshold value is set and any probability value below the Threshold is negative outcomesand 
+anything more than Threshold is positive.
+example: If Threshold = 0.5 then above 0.5 is marked as 1 and below 0.5 is marked as 0.
+
+AUC --> (Area under curve):
+It help to choose the best fit model amongst the model for which we have plotted the ROC curve.
+The best model is the one which covers the mazimum area under the curve.
